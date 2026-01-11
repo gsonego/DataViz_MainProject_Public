@@ -43,7 +43,7 @@ A short Q&A might be conducted in the week following the submission. Note that n
   - [x] Other technologies can be used, like HTML, CSS, JS but core app must have Shiny, Plotly, Matplotlib, Seaborn techs.
   - [x] Important to include titles, scales, labels and supporting text
 
-- [ ] Deploy app online
+- [x] ~~Deploy app online~~ Deploy it on GitHub
 
 - [ ] Record a screencast with audio (max 10 min.)
 
@@ -52,23 +52,23 @@ A short Q&A might be conducted in the week following the submission. Note that n
   - [ ] Highlight its key displays and characteristics
   - [ ] Outline key insights gained
 
-- [ ] Create a short report containing:
-  - [ ] Summary (max 200 words)
-  - [ ] Background Research
-  - [ ] Data source and description
-  - [ ] A short criticism which provides an honest review of the work
-  - [ ] A link to a server hosted
-  - [ ] Any additional information
-  - [ ] A basic version history file
+- [x] Create a short report containing:
+  - [x] Summary (max 200 words)
+  - [x] Background Research
+  - [x] Data source and description
+  - [x] A short criticism which provides an honest review of the work
+  - [x] A link to a server hosted
+  - [x] Any additional information
+  - [x] A basic version history file
 
 ## Deliverables
 
-- [ ] A complete project including main app folder and subfolders (GitHub)
-  - [ ] Commented Python code
-  - [ ] Data or links to data
-  - [ ] Setup Readme file with instructions on how to run the app
+- [x] A complete project including main app folder and subfolders (GitHub)
+  - [x] Commented Python code
+  - [x] Data or links to data
+  - [x] Setup Readme file with instructions on how to run the app
 - [ ] A screencast
-- [ ] A pdf report
+- [x] A pdf report
 
 ## Dataset Ideas
 
