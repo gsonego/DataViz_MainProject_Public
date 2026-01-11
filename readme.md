@@ -70,23 +70,29 @@ The dataset is selected. I was considering two options:
 **Note:** The decision was in favour of the Brazilian cities dataset because it contains more feature to be explored, although in this case we don't have date series to be analysed.
 
 **22/11/2025**
+
 Clean-up work. There was not much work involved as there were no missing values and all data types look cohesive. Also, it was time to decide about which columns to keep and those ones to drop.
 
 **23/11/2025**
+
 Create a new column "Region" to cluster states in smaller groups as per Brazil's administrative Region definition. After column creation, I checked if all regions were assigned correctly. Also, found some cities wrongly flagged as capitals.
 
 **25/11/2025**
+
 I tried to use separate files to implement all visual elements but faced many issues, so I opted by using Shiny Express mode with just one file (app.py)
 
 **25/11/2025**
+
 I decide creating the dashboard in just one file even if it ended up big, unfortunately I was wasting too much time trying to make it tidy, clean and compononent-wise but it was not possible.
 At the end, it's better this way so the code will be in just one place for lecturer assessment.
 
 **26/11/2026**
+
 I Started the creation of the dashboard layout, based on a sidebar to keep global filters and multi-tabs on the center.
 Each tab will contain some visualisations for an specific area / topic.
 
 **27/11/2026**
+
 Global filters added to sidebar:
 
 - Regions
@@ -96,6 +102,7 @@ Global filters added to sidebar:
 - Capital / Non Capital
 
 **28/11/2026**
+
 First charts were added:
 
 - Overview Tab
