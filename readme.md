@@ -128,12 +128,14 @@ Additional sections/charts created:
 - Agriculture
 
 **15/12/2025**
+
 Additional sections/charts created:
 
 - Cluster Analysis
 - Regression Analisys
 
 **16/12/2025**
+
 Additional sections/charts created:
 
 - Regional Structure & Inequality
@@ -148,7 +150,9 @@ Additional sections/charts created:
 - All layouts revised, colours adjusted for a better look and feel.
 
 **10/01/2026**
+
 Final revision for all charts and report.
 
 **11/01/2026**
+
 Final version released and submitted
