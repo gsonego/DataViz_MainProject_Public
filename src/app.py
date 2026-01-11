@@ -1047,7 +1047,8 @@ with ui.navset_tab(id="tabs", selected="home"):
                             'IDHM': 'Human Development Index',
                             'REGION': 'Region'
                         },
-                        log_x=use_log
+                        log_x=use_log,
+                        render_mode='svg'  # Force SVG rendering instead of WebGL
                     )
                     
                     fig.update_layout(
