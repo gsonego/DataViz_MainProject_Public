@@ -1241,22 +1241,23 @@ with ui.navset_tab(id="tabs", selected="home"):
         ui.br()
         # ROW 1: BANKING COVERAGE (Full Width)
         with ui.card():
-            ui.card_header("Banking Coverage by Region")
+            ui.card_header("Banking Agency Coverage by Region")
             
             @render_plotly
             def banking_coverage():
                 data = filtered_data()
                 
-                # Group by region and sum banking metrics
+                # Group by region and sum banking agencies
                 regional_banking = data.groupby('REGION').agg({
                     'Pr_Agencies': 'sum',
-                    'Pu_Agencies': 'sum',
-                    'Pr_Bank': 'sum',
-                    'Pu_Bank': 'sum'
+                    'Pu_Agencies': 'sum'
                 }).reset_index()
                 
-                # Sort by region name
-                regional_banking = regional_banking.sort_values('REGION')
+                # Calculate total agencies
+                regional_banking['Total_Agencies'] = regional_banking['Pr_Agencies'] + regional_banking['Pu_Agencies']
+                
+                # Sort by total agencies (descending)
+                regional_banking = regional_banking.sort_values('Total_Agencies', ascending=True)
                 
                 # Create grouped bar chart
                 fig = go.Figure()
@@ -1268,7 +1269,7 @@ with ui.navset_tab(id="tabs", selected="home"):
                     marker_color='steelblue',
                     text=regional_banking['Pr_Agencies'],
                     texttemplate='%{text:,}',
-                    textposition='outside'
+                    textposition='inside'
                 ))
                 
                 fig.add_trace(go.Bar(
@@ -1278,34 +1279,14 @@ with ui.navset_tab(id="tabs", selected="home"):
                     marker_color='coral',
                     text=regional_banking['Pu_Agencies'],
                     texttemplate='%{text:,}',
-                    textposition='outside'
-                ))
-                
-                fig.add_trace(go.Bar(
-                    name='Private Banks',
-                    x=regional_banking['REGION'],
-                    y=regional_banking['Pr_Bank'],
-                    marker_color='lightgreen',
-                    text=regional_banking['Pr_Bank'],
-                    texttemplate='%{text:,}',
-                    textposition='outside'
-                ))
-                
-                fig.add_trace(go.Bar(
-                    name='Public Banks',
-                    x=regional_banking['REGION'],
-                    y=regional_banking['Pu_Bank'],
-                    marker_color='gold',
-                    text=regional_banking['Pu_Bank'],
-                    texttemplate='%{text:,}',
-                    textposition='outside'
+                    textposition='inside'
                 ))
                 
                 fig.update_layout(
-                    barmode='group',
-                    title='Banking Infrastructure by Region',
+                    barmode='stack',
+                    title='Banking Agency Coverage by Region',
                     xaxis_title='Region',
-                    yaxis_title='Count',
+                    yaxis_title='Number of Agencies',
                     height=500,
                     showlegend=True,
                     legend=dict(
@@ -1493,7 +1474,8 @@ with ui.navset_tab(id="tabs", selected="home"):
                     },
                     log_x=True,
                     log_y=True,
-                    size_max=30
+                    size_max=30,
+                    render_mode='svg'  # Force SVG rendering instead of WebGL
                 )
                 
                 # Add diagonal reference line (where agro = total, which is impossible but for reference)
@@ -1602,7 +1584,8 @@ with ui.navset_tab(id="tabs", selected="home"):
                         'PC1': f'PC1 ({pca.explained_variance_ratio_[0]:.1%})',
                         'PC2': f'PC2 ({pca.explained_variance_ratio_[1]:.1%})',
                         'Cluster': 'Cluster'
-                    }
+                    },
+                    render_mode='svg'  # Force SVG rendering instead of WebGL
                 )
                 
                 fig.update_layout(
