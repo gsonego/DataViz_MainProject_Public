@@ -5,6 +5,8 @@
 This is the report file requested as part of the CA for Data Visualization module.
 It's named 'readme.md' so GitHub can show its content as the repository cover.
 
+**This file is part of the following GitHub repository: https://github.com/gsonego/DataViz_MainProject_Public**
+
 ## Summary
 
 This project is the Data Visualization main project which has the objective to implement an dashboard using Shiny for Python, in combination with supporting libraries such as Pandas, Matplotlib, Seaborn, Scikit-learn, and Plotly.
