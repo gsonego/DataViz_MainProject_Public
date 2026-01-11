@@ -5,7 +5,7 @@
 This is the report file requested as part of the CA for Data Visualization module.
 It's named 'readme.md' so GitHub can show its content as the repository cover.
 
-## Summary (max 200 words)
+## Summary
 
 This project is the Data Visualization main project which has the objective to implement an dashboard using Shiny for Python, in combination with supporting libraries such as Pandas, Matplotlib, Seaborn, Scikit-learn, and Plotly.
 
@@ -24,8 +24,6 @@ Special attention was given to understanding Brazil’s administrative structure
 This background indicated the selection of variables and the decision to emphasize regional comparisons and normalized views, which seem adequate for a country with strong structural disparities.
 
 ## Data source and description
-
-Data Source and Description
 
 The dataset used in this project is Brazilian Cities, available on Kaggle:
 https://www.kaggle.com/datasets/crisparada/brazilian-cities/
