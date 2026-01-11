@@ -943,7 +943,8 @@ with ui.navset_tab(id="tabs", selected="home"):
                             'REGION': 'Region'
                         },
                         log_x=use_log,
-                        size_max=20
+                        size_max=20,
+                        render_mode='svg'  # Force SVG rendering instead of WebGL
                     )
                     
                     fig.update_layout(
